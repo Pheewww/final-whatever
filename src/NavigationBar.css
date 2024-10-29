@@ -1,0 +1,40 @@
+/* NavigationBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightskyblue; /* Set background color as needed */
+  padding: 10px 10px; /* Adjust padding as needed */
+  color: white; /* Set text color as needed */
+  width: 100vm;
+}
+
+.logo-container {
+  /* Optional: Add styles for the logo container, like margin or padding */
+}
+.img{
+  width:850px;
+  height: auto;
+
+}
+.logo-img {
+  width: 50px; /* Set your desired logo width */
+  height: 50px; /* Maintain the aspect ratio */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.nav-link {
+  margin-left: 30px; /* Adjust link spacing as needed */
+  text-decoration: none;
+  color: black; /* Set link text color as needed */
+}
+
+.nav-link:hover,
+.active-link {
+  text-decoration: underline; /* Set link hover/active style as needed */
+}
