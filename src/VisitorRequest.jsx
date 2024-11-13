@@ -5,6 +5,7 @@ function VisitorRequest() {
         visitorName: '',
         visitDate: '',
         reason: '',
+        visEmail: '',
         studentRegNo: '',
         additionalInfo: '',
     });
@@ -21,71 +22,86 @@ function VisitorRequest() {
             visitorName: '',
             visitDate: '',
             reason: '',
+            visEmail: '',
             studentRegNo: '',
             additionalInfo: '',
         });
     };
 
     return (
-        <div style={styles.container}>
-            <h1 style={styles.title}>Visitor Request Form</h1>
-            <form onSubmit={handleSubmit} style={styles.form}>
-                <div style={styles.formGroup}>
-                    <label style={styles.label}>Visitor Name</label>
-                    <input
-                        type="text"
-                        name="visitorName"
-                        value={formData.visitorName}
-                        onChange={handleChange}
-                        style={styles.input}
-                        required
-                    />
-                </div>
-                <div style={styles.formGroup}>
-                    <label style={styles.label}>Visit Date</label>
-                    <input
-                        type="date"
-                        name="visitDate"
-                        value={formData.visitDate}
-                        onChange={handleChange}
-                        style={styles.input}
-                        required
-                    />
-                </div>
-                <div style={styles.formGroup}>
-                    <label style={styles.label}>Reason for Visit</label>
-                    <input
-                        type="text"
-                        name="reason"
-                        value={formData.reason}
-                        onChange={handleChange}
-                        style={styles.input}
-                        required
-                    />
-                </div>
-                <div style={styles.formGroup}>
-                    <label style={styles.label}>Student Registration No.</label>
-                    <input
-                        type="text"
-                        name="studentRegNo"
-                        value={formData.studentRegNo}
-                        onChange={handleChange}
-                        style={styles.input}
-                        required
-                    />
-                </div>
-                <div style={styles.formGroup}>
-                    <label style={styles.label}>Additional Information</label>
-                    <textarea
-                        name="additionalInfo"
-                        value={formData.additionalInfo}
-                        onChange={handleChange}
-                        style={styles.textarea}
-                    />
-                </div>
-                <button type="submit" style={styles.button}>Submit Request</button>
-            </form>
-        </div>
+      <div style={styles.container}>
+        <h1 style={styles.title}>Visitor Request Form</h1>
+        <form onSubmit={handleSubmit} style={styles.form}>
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Student Registration No.</label>
+            <input
+              type="text"
+              name="studentRegNo"
+              value={formData.studentRegNo}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Visitor Name</label>
+            <input
+              type="text"
+              name="visitorName"
+              value={formData.visitorName}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Visit Date</label>
+            <input
+              type="date"
+              name="visitDate"
+              value={formData.visitDate}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Visitor Email</label>
+            <input
+              type="email"
+              name="visEmail"
+              value={formData.visEmail}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Reason for Visit</label>
+            <input
+              type="text"
+              name="reason"
+              value={formData.reason}
+              onChange={handleChange}
+              style={styles.input}
+              required
+            />
+          </div>
+
+          <div style={styles.formGroup}>
+            <label style={styles.label}>Additional Information</label>
+            <textarea
+              name="additionalInfo"
+              value={formData.additionalInfo}
+              onChange={handleChange}
+              style={styles.textarea}
+            />
+          </div>
+          <button type="submit" style={styles.button}>
+            Submit Request
+          </button>
+        </form>
+      </div>
     );
 }
 
